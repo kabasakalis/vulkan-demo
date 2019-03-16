@@ -1,0 +1,79 @@
+[
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/baselib",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP -DSYSTEM_WINDOWS -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS -Dbaselib_EXPORTS -IF:\\cpp\\vulkan-demo\\cmake-build-debug\\source\\include -IF:\\cpp\\vulkan-demo\\source\\baselib\\include -IF:\\cpp\\vulkan-demo\\cmake-build-debug\\source\\baselib\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /MP /W4 /wd4251 /wd4592 /FoCMakeFiles\\baselib.dir\\source\\baselib.cpp.obj /FdCMakeFiles\\baselib.dir\\ /FS -c F:\\cpp\\vulkan-demo\\source\\baselib\\source\\baselib.cpp
+<<",
+  "file": "F:/cpp/vulkan-demo/source/baselib/source/baselib.cpp"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/fiblib",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP -DSYSTEM_WINDOWS -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS -Dfiblib_EXPORTS -IF:\\cpp\\vulkan-demo\\cmake-build-debug\\source\\include -IF:\\cpp\\vulkan-demo\\source\\fiblib\\include -IF:\\cpp\\vulkan-demo\\cmake-build-debug\\source\\fiblib\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /MP /W4 /wd4251 /wd4592 /FoCMakeFiles\\fiblib.dir\\source\\Fibonacci.cpp.obj /FdCMakeFiles\\fiblib.dir\\ /FS -c F:\\cpp\\vulkan-demo\\source\\fiblib\\source\\Fibonacci.cpp
+<<",
+  "file": "F:/cpp/vulkan-demo/source/fiblib/source/Fibonacci.cpp"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gmock_main.dir\\__\\googletest\\src\\gtest-all.cc.obj /FdCMakeFiles\\gmock_main.dir\\gmock_main.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\src\\gtest-all.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gmock_main.dir\\src\\gmock-all.cc.obj /FdCMakeFiles\\gmock_main.dir\\gmock_main.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\src\\gmock-all.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj /FdCMakeFiles\\gmock_main.dir\\gmock_main.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\src\\gmock_main.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googlemock/src/gmock_main.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gmock.dir\\__\\googletest\\src\\gtest-all.cc.obj /FdCMakeFiles\\gmock.dir\\gmock.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\src\\gtest-all.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj /FdCMakeFiles\\gmock.dir\\gmock.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\src\\gmock-all.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googlemock/src/gmock-all.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock/gtest",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj /FdCMakeFiles\\gtest.dir\\gtest.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\src\\gtest-all.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/googletest/googlemock/gtest",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP  -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include  /DWIN32 /D_WINDOWS /W4 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /DWIN32 /D_WINDOWS /W4 /GR /EHsc -GS -W4 -WX -wd4251 -wd4275 -nologo -J -Zi -wd4702 -D_UNICODE -DUNICODE -DWIN32 -D_WIN32 -DSTRICT -DWIN32_LEAN_AND_MEAN -DGTEST_HAS_PTHREAD=0 -EHsc -D_HAS_EXCEPTIONS=1  /FoCMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj /FdCMakeFiles\\gtest_main.dir\\gtest_main.pdb /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\src\\gtest_main.cc
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/googletest/googletest/src/gtest_main.cc"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/fiblib-test",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP -DSYSTEM_WINDOWS -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS -IF:\\cpp\\vulkan-demo\\cmake-build-debug\\source\\tests\\source\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /MP /W4 /wd4251 /wd4592 /FoCMakeFiles\\fiblib-test.dir\\main.cpp.obj /FdCMakeFiles\\fiblib-test.dir\\ /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\fiblib-test\\main.cpp
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/fiblib-test/main.cpp"
+},
+{
+  "directory": "F:/cpp/vulkan-demo/cmake-build-debug/source/tests/fiblib-test",
+  "command": "C:\\PROGRA~2\\MICROS~1\\2017\\COMMUN~1\\VC\\Tools\\MSVC\\1413~1.261\\bin\\Hostx86\\x86\\cl.exe @<<
+ /nologo /TP -DSYSTEM_WINDOWS -D_CRT_SECURE_NO_WARNINGS -D_SCL_SECURE_NO_WARNINGS -IF:\\cpp\\vulkan-demo\\cmake-build-debug\\source\\tests\\source\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googletest\\include -IF:\\cpp\\vulkan-demo\\source\\tests\\googletest\\googlemock\\include  /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1   /MP /W4 /wd4251 /wd4592 /FoCMakeFiles\\fiblib-test.dir\\fibonacci_test.cpp.obj /FdCMakeFiles\\fiblib-test.dir\\ /FS -c F:\\cpp\\vulkan-demo\\source\\tests\\fiblib-test\\fibonacci_test.cpp
+<<",
+  "file": "F:/cpp/vulkan-demo/source/tests/fiblib-test/fibonacci_test.cpp"
+}
+]

@@ -1,0 +1,34 @@
+Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR failed with the following output:
+Change Dir: F:/cpp/vulkan-demo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"nmake" "/nologo" "cmTC_fe840\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_fe840.dir\build.make /nologo -L                  CMakeFiles\cmTC_fe840.dir\build
+Building CXX object CMakeFiles/cmTC_fe840.dir/src.cxx.obj
+	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @C:\Users\spiros\AppData\Local\Temp\nm2F97.tmp
+src.cxx
+F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx(1): error C2065: '__deprecated__': undeclared identifier
+F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx(1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx(1): error C2448: '__attribute__': function-style initializer appears to be a function definition
+NMAKE : fatal error U1077: 'C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\nmake.exe"' : return code '0x2'
+Stop.
+
+Source file was:
+__attribute__((__deprecated__)) int somefunc() { return 0; }
+    int main() { return somefunc();}
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: F:/cpp/vulkan-demo/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"nmake" "/nologo" "cmTC_83630\fast"
+	"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\nmake.exe" -f CMakeFiles\cmTC_83630.dir\build.make /nologo -L                  CMakeFiles\cmTC_83630.dir\build
+Building C object CMakeFiles/cmTC_83630.dir/CheckIncludeFile.c.obj
+	C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe @C:\Users\spiros\AppData\Local\Temp\nm34C7.tmp
+CheckIncludeFile.c
+F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+NMAKE : fatal error U1077: 'C:\PROGRA~2\MICROS~1\2017\COMMUN~1\VC\Tools\MSVC\1413~1.261\bin\Hostx86\x86\cl.exe' : return code '0x2'
+Stop.
+NMAKE : fatal error U1077: '"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.13.26128\bin\HostX86\x86\nmake.exe"' : return code '0x2'
+Stop.
+
+
