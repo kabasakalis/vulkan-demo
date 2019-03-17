@@ -92,17 +92,6 @@ edit_cache\fast: edit_cache
 
 .PHONY : edit_cache\fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	F:\Programs\clion\bin\cmake\win\bin\cpack.exe --config ./CPackSourceConfig.cmake F:/cpp/vulkan-demo/cmake-build-debug/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source\fast: package_source
-
-.PHONY : package_source\fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -116,7 +105,7 @@ rebuild_cache\fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"runtime\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"examples\" \"runtime\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -287,17 +276,43 @@ clang-tidy-fiblib\fast:
 .PHONY : clang-tidy-fiblib\fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named fibcmd
 
 # Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) test
-.PHONY : test
+fibcmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) fibcmd
+.PHONY : fibcmd
 
 # fast build rule for target.
-test\fast:
-	$(MAKE) -f source\tests\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\test.dir\build
-.PHONY : test\fast
+fibcmd\fast:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\fibcmd.dir\build
+.PHONY : fibcmd\fast
+
+#=============================================================================
+# Target rules for targets named cppcheck-fibcmd
+
+# Build rule for target.
+cppcheck-fibcmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) cppcheck-fibcmd
+.PHONY : cppcheck-fibcmd
+
+# fast build rule for target.
+cppcheck-fibcmd\fast:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\build
+.PHONY : cppcheck-fibcmd\fast
+
+#=============================================================================
+# Target rules for targets named check-fibcmd
+
+# Build rule for target.
+check-fibcmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) check-fibcmd
+.PHONY : check-fibcmd
+
+# fast build rule for target.
+check-fibcmd\fast:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\build
+.PHONY : check-fibcmd\fast
 
 #=============================================================================
 # Target rules for targets named coverage
@@ -309,73 +324,21 @@ coverage: cmake_check_build_system
 
 # fast build rule for target.
 coverage\fast:
-	$(MAKE) -f source\tests\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\coverage.dir\build
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\coverage.dir\build
 .PHONY : coverage\fast
 
 #=============================================================================
-# Target rules for targets named gmock_main
+# Target rules for targets named clang-tidy-fibcmd
 
 # Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock_main
-.PHONY : gmock_main
+clang-tidy-fibcmd: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) clang-tidy-fibcmd
+.PHONY : clang-tidy-fibcmd
 
 # fast build rule for target.
-gmock_main\fast:
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\build
-.PHONY : gmock_main\fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock\fast:
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock.dir\build
-.PHONY : gmock\fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest\fast:
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\build
-.PHONY : gtest\fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main\fast:
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\build
-.PHONY : gtest_main\fast
-
-#=============================================================================
-# Target rules for targets named fiblib-test
-
-# Build rule for target.
-fiblib-test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) fiblib-test
-.PHONY : fiblib-test
-
-# fast build rule for target.
-fiblib-test\fast:
-	$(MAKE) -f source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\build
-.PHONY : fiblib-test\fast
+clang-tidy-fibcmd\fast:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\build
+.PHONY : clang-tidy-fibcmd\fast
 
 # Help Target
 help:
@@ -387,7 +350,6 @@ help:
 	@echo ... install
 	@echo ... edit_cache
 	@echo ... check-template
-	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... list_install_components
 	@echo ... cppcheck-baselib
@@ -399,13 +361,11 @@ help:
 	@echo ... fiblib
 	@echo ... check-fiblib
 	@echo ... clang-tidy-fiblib
-	@echo ... test
+	@echo ... fibcmd
+	@echo ... cppcheck-fibcmd
+	@echo ... check-fibcmd
 	@echo ... coverage
-	@echo ... gmock_main
-	@echo ... gmock
-	@echo ... gtest
-	@echo ... gtest_main
-	@echo ... fiblib-test
+	@echo ... clang-tidy-fibcmd
 .PHONY : help
 
 

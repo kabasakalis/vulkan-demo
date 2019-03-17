@@ -3,7 +3,7 @@
 # External dependencies
 # 
 
-find_package(${META_PROJECT_ID} REQUIRED HINTS "${CMAKE_CURRENT_SOURCE_DIR}/../../../")
+find_package(${META_PROJECT_NAME} REQUIRED HINTS "${CMAKE_CURRENT_SOURCE_DIR}/../../../")
 
 # 
 # Executable name and options
@@ -34,7 +34,7 @@ add_executable(${target}
 )
 
 # Create namespaced alias
-add_executable(${META_PROJECT_ID}::${target} ALIAS ${target})
+add_executable(${META_PROJECT_NAME}::${target} ALIAS ${target})
 
 
 # 

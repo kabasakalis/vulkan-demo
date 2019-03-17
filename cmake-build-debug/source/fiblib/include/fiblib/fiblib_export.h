@@ -1,18 +1,18 @@
 
-#ifndef fiblib_API_H
-#define fiblib_API_H
+#ifndef FIBLIB_API_H
+#define FIBLIB_API_H
 
 #ifdef FIBLIB_STATIC_DEFINE
-#  define fiblib_API
+#  define FIBLIB_API
 #  define FIBLIB_NO_EXPORT
 #else
-#  ifndef fiblib_API
+#  ifndef FIBLIB_API
 #    ifdef fiblib_EXPORTS
         /* We are building this library */
-#      define fiblib_API __declspec(dllexport)
+#      define FIBLIB_API __declspec(dllexport)
 #    else
         /* We are using this library */
-#      define fiblib_API __declspec(dllimport)
+#      define FIBLIB_API __declspec(dllimport)
 #    endif
 #  endif
 
@@ -26,7 +26,7 @@
 #endif
 
 #ifndef FIBLIB_DEPRECATED_EXPORT
-#  define FIBLIB_DEPRECATED_EXPORT fiblib_API FIBLIB_DEPRECATED
+#  define FIBLIB_DEPRECATED_EXPORT FIBLIB_API FIBLIB_DEPRECATED
 #endif
 
 #ifndef FIBLIB_DEPRECATED_NO_EXPORT
@@ -39,4 +39,4 @@
 #  endif
 #endif
 
-#endif /* fiblib_API_H */
+#endif /* FIBLIB_API_H */

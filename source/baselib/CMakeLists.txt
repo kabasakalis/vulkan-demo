@@ -60,7 +60,7 @@ add_library(${target}
 )
 
 # Create namespaced alias
-add_library(${META_PROJECT_ID}::${target} ALIAS ${target})
+add_library(${META_PROJECT_NAME}::${target} ALIAS ${target})
 
 # Export library for downstream projects
 export(TARGETS ${target} NAMESPACE ${META_PROJECT_NAME}:: FILE ${PROJECT_BINARY_DIR}/cmake/${target}/${target}-export.cmake)

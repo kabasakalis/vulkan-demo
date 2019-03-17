@@ -1,34 +1,30 @@
 F:\Programs\clion\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - NMake Makefiles" F:\cpp\vulkan-demo
+-- The C compiler identification is MSVC 19.13.26128.0
+-- The CXX compiler identification is MSVC 19.13.26128.0
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.13.26128/bin/Hostx86/x86/cl.exe
+-- Check for working C compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.13.26128/bin/Hostx86/x86/cl.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.13.26128/bin/Hostx86/x86/cl.exe
+-- Check for working CXX compiler: C:/Program Files (x86)/Microsoft Visual Studio/2017/Community/VC/Tools/MSVC/14.13.26128/bin/Hostx86/x86/cl.exe -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found cppcheck: F:/msys64/mingw64/bin/cppcheck.exe  
 -- Check cppcheck
+-- Found clang_tidy: F:/tools/clang-tidy.exe  
 -- Check clang-tidy
 -- Coverage lcov skipped: Manually disabled
 -- Lib baselib
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Failed
+-- Performing Test COMPILER_HAS_DEPRECATED
+-- Performing Test COMPILER_HAS_DEPRECATED - Success
 -- Lib fiblib
-CMake Deprecation Warning at cmake/Custom.cmake:6 (cmake_policy):
-  The OLD behavior for policy CMP0037 will be removed from a future version
-  of CMake.
-
-  The cmake-policies(7) manual explains that the OLD behaviors of all
-  policies are deprecated and that a policy should be set to OLD only under
-  specific short-term circumstances.  Projects should be ported to the NEW
-  behavior and not rely on setting a policy to OLD.
-Call Stack (most recent call first):
-  source/tests/CMakeLists.txt:19 (set_policy)
-
-
--- Test fiblib-test
+-- Example fibcmd
 -- Configuring done
-CMake Error at source/tests/fiblib-test/CMakeLists.txt:32 (add_executable):
-  Target "fiblib-test" links to target "template::fiblib" but the target was
-  not found.  Perhaps a find_package() call is missing for an IMPORTED
-  target, or an ALIAS target is missing?
-
-
-CMake Error at source/tests/fiblib-test/CMakeLists.txt:32 (add_executable):
-  Target "fiblib-test" links to target "template::fiblib" but the target was
-  not found.  Perhaps a find_package() call is missing for an IMPORTED
-  target, or an ALIAS target is missing?
-
-
 -- Generating done
 -- Build files have been written to: F:/cpp/vulkan-demo/cmake-build-debug

@@ -18,7 +18,7 @@ message(STATUS "Lib ${target}")
 
 # Set API export file and macro
 string(MAKE_C_IDENTIFIER ${target} target_id)
-string(TOLOWER ${target_id} target_id)
+string(TOUPPER ${target_id} target_id)
 set(feature_file         "include/${target}/${target}_features.h")
 set(export_file          "include/${target}/${target}_export.h")
 set(template_export_file "include/${target}/${target}_api.h")
@@ -62,7 +62,7 @@ add_library(${target}
 )
 
 # Create namespaced alias
-add_library(${META_PROJECT_ID}::${target} ALIAS ${target})
+add_library(${META_PROJECT_NAME}::${target} ALIAS ${target})
 
 # Export library for downstream projects
 export(TARGETS ${target} NAMESPACE ${META_PROJECT_NAME}:: FILE ${PROJECT_BINARY_DIR}/cmake/${target}/${target}-export.cmake)

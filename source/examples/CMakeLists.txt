@@ -6,4 +6,4 @@ endif()
 
 # Example applications
 add_subdirectory(fibcmd)
-add_subdirectory(fibgui)
+#add_subdirectory(fibgui)

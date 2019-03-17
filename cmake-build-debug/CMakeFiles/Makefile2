@@ -104,7 +104,6 @@ clean: CMakeFiles\check-template.dir\clean
 source\all: source\baselib\all
 source\all: source\fiblib\all
 source\all: source\examples\all
-source\all: source\tests\all
 
 .PHONY : source\all
 
@@ -112,7 +111,6 @@ source\all: source\tests\all
 source\clean: source\baselib\clean
 source\clean: source\fiblib\clean
 source\clean: source\examples\clean
-source\clean: source\tests\clean
 
 .PHONY : source\clean
 
@@ -120,7 +118,6 @@ source\clean: source\tests\clean
 source\preinstall: source\baselib\preinstall
 source\preinstall: source\fiblib\preinstall
 source\preinstall: source\examples\preinstall
-source\preinstall: source\tests\preinstall
 
 .PHONY : source\preinstall
 
@@ -221,6 +218,7 @@ clean: source\baselib\CMakeFiles\baselib.dir\clean
 # All Build rule for target.
 source\baselib\CMakeFiles\check-all.dir\all: source\baselib\CMakeFiles\check-baselib.dir\all
 source\baselib\CMakeFiles\check-all.dir\all: source\fiblib\CMakeFiles\check-fiblib.dir\all
+source\baselib\CMakeFiles\check-all.dir\all: source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\all
 	$(MAKE) -f source\baselib\CMakeFiles\check-all.dir\build.make /nologo -$(MAKEFLAGS) source\baselib\CMakeFiles\check-all.dir\depend
 	$(MAKE) -f source\baselib\CMakeFiles\check-all.dir\build.make /nologo -$(MAKEFLAGS) source\baselib\CMakeFiles\check-all.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target check-all"
@@ -228,7 +226,7 @@ source\baselib\CMakeFiles\check-all.dir\all: source\fiblib\CMakeFiles\check-fibl
 
 # Build rule for subdir invocation for target.
 source\baselib\CMakeFiles\check-all.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 6
 	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\baselib\CMakeFiles\check-all.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
 .PHONY : source\baselib\CMakeFiles\check-all.dir\rule
@@ -252,8 +250,8 @@ clean: source\baselib\CMakeFiles\check-all.dir\clean
 # Target rules for target source/baselib/CMakeFiles/check-baselib.dir
 
 # All Build rule for target.
-source\baselib\CMakeFiles\check-baselib.dir\all: source\baselib\CMakeFiles\cppcheck-baselib.dir\all
 source\baselib\CMakeFiles\check-baselib.dir\all: source\baselib\CMakeFiles\clang-tidy-baselib.dir\all
+source\baselib\CMakeFiles\check-baselib.dir\all: source\baselib\CMakeFiles\cppcheck-baselib.dir\all
 	$(MAKE) -f source\baselib\CMakeFiles\check-baselib.dir\build.make /nologo -$(MAKEFLAGS) source\baselib\CMakeFiles\check-baselib.dir\depend
 	$(MAKE) -f source\baselib\CMakeFiles\check-baselib.dir\build.make /nologo -$(MAKEFLAGS) source\baselib\CMakeFiles\check-baselib.dir\build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target check-baselib"
@@ -373,7 +371,7 @@ clean: source\fiblib\CMakeFiles\cppcheck-fiblib.dir\clean
 source\fiblib\CMakeFiles\fiblib.dir\all:
 	$(MAKE) -f source\fiblib\CMakeFiles\fiblib.dir\build.make /nologo -$(MAKEFLAGS) source\fiblib\CMakeFiles\fiblib.dir\depend
 	$(MAKE) -f source\fiblib\CMakeFiles\fiblib.dir\build.make /nologo -$(MAKEFLAGS) source\fiblib\CMakeFiles\fiblib.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target fiblib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=5,6 "Built target fiblib"
 .PHONY : source\fiblib\CMakeFiles\fiblib.dir\all
 
 # Include target in all.
@@ -472,349 +470,206 @@ clean: source\fiblib\CMakeFiles\clang-tidy-fiblib.dir\clean
 # Directory level rules for directory source\examples
 
 # Convenience name for "all" pass in the directory.
-source\examples\all:
+source\examples\all: source\examples\fibcmd\all
 
 .PHONY : source\examples\all
 
 # Convenience name for "clean" pass in the directory.
-source\examples\clean:
+source\examples\clean: source\examples\fibcmd\clean
 
 .PHONY : source\examples\clean
 
 # Convenience name for "preinstall" pass in the directory.
-source\examples\preinstall:
+source\examples\preinstall: source\examples\fibcmd\preinstall
 
 .PHONY : source\examples\preinstall
 
 #=============================================================================
-# Directory level rules for directory source\tests
+# Directory level rules for directory source\examples\fibcmd
 
 # Convenience name for "all" pass in the directory.
-source\tests\all: source\tests\googletest\googlemock\all
-source\tests\all: source\tests\fiblib-test\all
+source\examples\fibcmd\all: source\examples\fibcmd\CMakeFiles\fibcmd.dir\all
 
-.PHONY : source\tests\all
+.PHONY : source\examples\fibcmd\all
 
 # Convenience name for "clean" pass in the directory.
-source\tests\clean: source\tests\CMakeFiles\test.dir\clean
-source\tests\clean: source\tests\CMakeFiles\coverage.dir\clean
-source\tests\clean: source\tests\googletest\googlemock\clean
-source\tests\clean: source\tests\fiblib-test\clean
+source\examples\fibcmd\clean: source\examples\fibcmd\CMakeFiles\fibcmd.dir\clean
+source\examples\fibcmd\clean: source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\clean
+source\examples\fibcmd\clean: source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\clean
+source\examples\fibcmd\clean: source\examples\fibcmd\CMakeFiles\coverage.dir\clean
+source\examples\fibcmd\clean: source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\clean
 
-.PHONY : source\tests\clean
+.PHONY : source\examples\fibcmd\clean
 
 # Convenience name for "preinstall" pass in the directory.
-source\tests\preinstall: source\tests\googletest\googlemock\preinstall
-source\tests\preinstall: source\tests\fiblib-test\preinstall
+source\examples\fibcmd\preinstall:
 
-.PHONY : source\tests\preinstall
+.PHONY : source\examples\fibcmd\preinstall
 
 #=============================================================================
-# Target rules for target source/tests/CMakeFiles/test.dir
+# Target rules for target source/examples/fibcmd/CMakeFiles/fibcmd.dir
 
 # All Build rule for target.
-source\tests\CMakeFiles\test.dir\all: source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\all
-	$(MAKE) -f source\tests\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\test.dir\depend
-	$(MAKE) -f source\tests\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\test.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target test"
-.PHONY : source\tests\CMakeFiles\test.dir\all
+source\examples\fibcmd\CMakeFiles\fibcmd.dir\all: source\fiblib\CMakeFiles\fiblib.dir\all
+source\examples\fibcmd\CMakeFiles\fibcmd.dir\all: source\baselib\CMakeFiles\baselib.dir\all
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\fibcmd.dir\depend
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\fibcmd.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=3,4 "Built target fibcmd"
+.PHONY : source\examples\fibcmd\CMakeFiles\fibcmd.dir\all
+
+# Include target in all.
+all: source\examples\fibcmd\CMakeFiles\fibcmd.dir\all
+
+.PHONY : all
 
 # Build rule for subdir invocation for target.
-source\tests\CMakeFiles\test.dir\rule: cmake_check_build_system
+source\examples\fibcmd\CMakeFiles\fibcmd.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 6
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\test.dir\all
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\fibcmd.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\CMakeFiles\test.dir\rule
+.PHONY : source\examples\fibcmd\CMakeFiles\fibcmd.dir\rule
 
 # Convenience name for target.
-test: source\tests\CMakeFiles\test.dir\rule
+fibcmd: source\examples\fibcmd\CMakeFiles\fibcmd.dir\rule
 
-.PHONY : test
-
-# clean rule for target.
-source\tests\CMakeFiles\test.dir\clean:
-	$(MAKE) -f source\tests\CMakeFiles\test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\test.dir\clean
-.PHONY : source\tests\CMakeFiles\test.dir\clean
+.PHONY : fibcmd
 
 # clean rule for target.
-clean: source\tests\CMakeFiles\test.dir\clean
+source\examples\fibcmd\CMakeFiles\fibcmd.dir\clean:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\fibcmd.dir\clean
+.PHONY : source\examples\fibcmd\CMakeFiles\fibcmd.dir\clean
+
+# clean rule for target.
+clean: source\examples\fibcmd\CMakeFiles\fibcmd.dir\clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target source/tests/CMakeFiles/coverage.dir
+# Target rules for target source/examples/fibcmd/CMakeFiles/cppcheck-fibcmd.dir
 
 # All Build rule for target.
-source\tests\CMakeFiles\coverage.dir\all:
-	$(MAKE) -f source\tests\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\coverage.dir\depend
-	$(MAKE) -f source\tests\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\coverage.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target coverage"
-.PHONY : source\tests\CMakeFiles\coverage.dir\all
+source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\all: source\examples\fibcmd\CMakeFiles\fibcmd.dir\all
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\depend
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target cppcheck-fibcmd"
+.PHONY : source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\all
 
 # Build rule for subdir invocation for target.
-source\tests\CMakeFiles\coverage.dir\rule: cmake_check_build_system
+source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 6
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\coverage.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\CMakeFiles\coverage.dir\rule
+.PHONY : source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\rule
 
 # Convenience name for target.
-coverage: source\tests\CMakeFiles\coverage.dir\rule
+cppcheck-fibcmd: source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\rule
+
+.PHONY : cppcheck-fibcmd
+
+# clean rule for target.
+source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\clean:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\clean
+.PHONY : source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\clean
+
+# clean rule for target.
+clean: source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target source/examples/fibcmd/CMakeFiles/check-fibcmd.dir
+
+# All Build rule for target.
+source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\all: source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\all
+source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\all: source\examples\fibcmd\CMakeFiles\cppcheck-fibcmd.dir\all
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\depend
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target check-fibcmd"
+.PHONY : source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\all
+
+# Build rule for subdir invocation for target.
+source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 6
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
+.PHONY : source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\rule
+
+# Convenience name for target.
+check-fibcmd: source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\rule
+
+.PHONY : check-fibcmd
+
+# clean rule for target.
+source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\clean:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\clean
+.PHONY : source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\clean
+
+# clean rule for target.
+clean: source\examples\fibcmd\CMakeFiles\check-fibcmd.dir\clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target source/examples/fibcmd/CMakeFiles/coverage.dir
+
+# All Build rule for target.
+source\examples\fibcmd\CMakeFiles\coverage.dir\all:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\coverage.dir\depend
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\coverage.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target coverage"
+.PHONY : source\examples\fibcmd\CMakeFiles\coverage.dir\all
+
+# Build rule for subdir invocation for target.
+source\examples\fibcmd\CMakeFiles\coverage.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\coverage.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
+.PHONY : source\examples\fibcmd\CMakeFiles\coverage.dir\rule
+
+# Convenience name for target.
+coverage: source\examples\fibcmd\CMakeFiles\coverage.dir\rule
 
 .PHONY : coverage
 
 # clean rule for target.
-source\tests\CMakeFiles\coverage.dir\clean:
-	$(MAKE) -f source\tests\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\tests\CMakeFiles\coverage.dir\clean
-.PHONY : source\tests\CMakeFiles\coverage.dir\clean
+source\examples\fibcmd\CMakeFiles\coverage.dir\clean:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\coverage.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\coverage.dir\clean
+.PHONY : source\examples\fibcmd\CMakeFiles\coverage.dir\clean
 
 # clean rule for target.
-clean: source\tests\CMakeFiles\coverage.dir\clean
+clean: source\examples\fibcmd\CMakeFiles\coverage.dir\clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory source\tests\googletest\googlemock
-
-# Convenience name for "all" pass in the directory.
-source\tests\googletest\googlemock\all: source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\all
-source\tests\googletest\googlemock\all: source\tests\googletest\googlemock\CMakeFiles\gmock.dir\all
-source\tests\googletest\googlemock\all: source\tests\googletest\googlemock\gtest\all
-
-.PHONY : source\tests\googletest\googlemock\all
-
-# Convenience name for "clean" pass in the directory.
-source\tests\googletest\googlemock\clean: source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\clean
-source\tests\googletest\googlemock\clean: source\tests\googletest\googlemock\CMakeFiles\gmock.dir\clean
-source\tests\googletest\googlemock\clean: source\tests\googletest\googlemock\gtest\clean
-
-.PHONY : source\tests\googletest\googlemock\clean
-
-# Convenience name for "preinstall" pass in the directory.
-source\tests\googletest\googlemock\preinstall: source\tests\googletest\googlemock\gtest\preinstall
-
-.PHONY : source\tests\googletest\googlemock\preinstall
-
-#=============================================================================
-# Target rules for target source/tests/googletest/googlemock/CMakeFiles/gmock_main.dir
+# Target rules for target source/examples/fibcmd/CMakeFiles/clang-tidy-fibcmd.dir
 
 # All Build rule for target.
-source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\all:
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\depend
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=11,12,13,14 "Built target gmock_main"
-.PHONY : source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\all
-
-# Include target in all.
-all: source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\all
-
-.PHONY : all
+source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\all: source\examples\fibcmd\CMakeFiles\fibcmd.dir\all
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\depend
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num= "Built target clang-tidy-fibcmd"
+.PHONY : source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\all
 
 # Build rule for subdir invocation for target.
-source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 4
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\rule
-
-# Convenience name for target.
-gmock_main: source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\rule
-
-.PHONY : gmock_main
-
-# clean rule for target.
-source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\clean:
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\clean
-.PHONY : source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\clean
-
-# clean rule for target.
-clean: source\tests\googletest\googlemock\CMakeFiles\gmock_main.dir\clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target source/tests/googletest/googlemock/CMakeFiles/gmock.dir
-
-# All Build rule for target.
-source\tests\googletest\googlemock\CMakeFiles\gmock.dir\all:
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock.dir\depend
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=8,9,10 "Built target gmock"
-.PHONY : source\tests\googletest\googlemock\CMakeFiles\gmock.dir\all
-
-# Include target in all.
-all: source\tests\googletest\googlemock\CMakeFiles\gmock.dir\all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-source\tests\googletest\googlemock\CMakeFiles\gmock.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 3
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\googletest\googlemock\CMakeFiles\gmock.dir\rule
-
-# Convenience name for target.
-gmock: source\tests\googletest\googlemock\CMakeFiles\gmock.dir\rule
-
-.PHONY : gmock
-
-# clean rule for target.
-source\tests\googletest\googlemock\CMakeFiles\gmock.dir\clean:
-	$(MAKE) -f source\tests\googletest\googlemock\CMakeFiles\gmock.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\CMakeFiles\gmock.dir\clean
-.PHONY : source\tests\googletest\googlemock\CMakeFiles\gmock.dir\clean
-
-# clean rule for target.
-clean: source\tests\googletest\googlemock\CMakeFiles\gmock.dir\clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory source\tests\googletest\googlemock\gtest
-
-# Convenience name for "all" pass in the directory.
-source\tests\googletest\googlemock\gtest\all: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\all
-source\tests\googletest\googlemock\gtest\all: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\all
-
-.PHONY : source\tests\googletest\googlemock\gtest\all
-
-# Convenience name for "clean" pass in the directory.
-source\tests\googletest\googlemock\gtest\clean: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\clean
-source\tests\googletest\googlemock\gtest\clean: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\clean
-
-.PHONY : source\tests\googletest\googlemock\gtest\clean
-
-# Convenience name for "preinstall" pass in the directory.
-source\tests\googletest\googlemock\gtest\preinstall:
-
-.PHONY : source\tests\googletest\googlemock\gtest\preinstall
-
-#=============================================================================
-# Target rules for target source/tests/googletest/googlemock/gtest/CMakeFiles/gtest.dir
-
-# All Build rule for target.
-source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\all:
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\depend
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=15,16 "Built target gtest"
-.PHONY : source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\all
-
-# Include target in all.
-all: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 2
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\rule
-
-# Convenience name for target.
-gtest: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\rule
-
-.PHONY : gtest
-
-# clean rule for target.
-source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\clean:
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\clean
-.PHONY : source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\clean
-
-# clean rule for target.
-clean: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target source/tests/googletest/googlemock/gtest/CMakeFiles/gtest_main.dir
-
-# All Build rule for target.
-source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\all: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest.dir\all
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\depend
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=17,18 "Built target gtest_main"
-.PHONY : source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\all
-
-# Include target in all.
-all: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 4
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\all
-	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\rule
-
-# Convenience name for target.
-gtest_main: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\rule
-
-.PHONY : gtest_main
-
-# clean rule for target.
-source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\clean:
-	$(MAKE) -f source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\build.make /nologo -$(MAKEFLAGS) source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\clean
-.PHONY : source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\clean
-
-# clean rule for target.
-clean: source\tests\googletest\googlemock\gtest\CMakeFiles\gtest_main.dir\clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory source\tests\fiblib-test
-
-# Convenience name for "all" pass in the directory.
-source\tests\fiblib-test\all: source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\all
-
-.PHONY : source\tests\fiblib-test\all
-
-# Convenience name for "clean" pass in the directory.
-source\tests\fiblib-test\clean: source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\clean
-
-.PHONY : source\tests\fiblib-test\clean
-
-# Convenience name for "preinstall" pass in the directory.
-source\tests\fiblib-test\preinstall:
-
-.PHONY : source\tests\fiblib-test\preinstall
-
-#=============================================================================
-# Target rules for target source/tests/fiblib-test/CMakeFiles/fiblib-test.dir
-
-# All Build rule for target.
-source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\all: source\tests\googletest\googlemock\CMakeFiles\gmock.dir\all
-	$(MAKE) -f source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\depend
-	$(MAKE) -f source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles --progress-num=5,6,7 "Built target fiblib-test"
-.PHONY : source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\all
-
-# Include target in all.
-all: source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\rule: cmake_check_build_system
+source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 6
-	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\all
+	$(MAKE) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\all
 	$(CMAKE_COMMAND) -E cmake_progress_start F:\cpp\vulkan-demo\cmake-build-debug\CMakeFiles 0
-.PHONY : source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\rule
+.PHONY : source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\rule
 
 # Convenience name for target.
-fiblib-test: source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\rule
+clang-tidy-fibcmd: source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\rule
 
-.PHONY : fiblib-test
-
-# clean rule for target.
-source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\clean:
-	$(MAKE) -f source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\build.make /nologo -$(MAKEFLAGS) source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\clean
-.PHONY : source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\clean
+.PHONY : clang-tidy-fibcmd
 
 # clean rule for target.
-clean: source\tests\fiblib-test\CMakeFiles\fiblib-test.dir\clean
+source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\clean:
+	$(MAKE) -f source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\build.make /nologo -$(MAKEFLAGS) source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\clean
+.PHONY : source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\clean
+
+# clean rule for target.
+clean: source\examples\fibcmd\CMakeFiles\clang-tidy-fibcmd.dir\clean
 
 .PHONY : clean
 

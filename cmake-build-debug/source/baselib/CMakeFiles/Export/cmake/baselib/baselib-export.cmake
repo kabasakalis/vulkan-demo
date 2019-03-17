@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget Vulkan Demo::baselib)
+foreach(_expectedTarget VulkanDemo::baselib)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -49,10 +49,10 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target Vulkan Demo::baselib
-add_library(Vulkan Demo::baselib SHARED IMPORTED)
+# Create imported target VulkanDemo::baselib
+add_library(VulkanDemo::baselib SHARED IMPORTED)
 
-set_target_properties(Vulkan Demo::baselib PROPERTIES
+set_target_properties(VulkanDemo::baselib PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "\$<\$<NOT:\$<BOOL:ON>>:BASELIB_STATIC_DEFINE>;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS"
   INTERFACE_COMPILE_OPTIONS "/MP;/W4;/wd4251;/wd4592;\$<\$<CONFIG:Release>:;/Gw;/GS-;/GL;/GF;>"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"

@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget Vulkan Demo::fiblib)
+foreach(_expectedTarget VulkanDemo::fiblib)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -49,11 +49,11 @@ if(_IMPORT_PREFIX STREQUAL "/")
   set(_IMPORT_PREFIX "")
 endif()
 
-# Create imported target Vulkan Demo::fiblib
-add_library(Vulkan Demo::fiblib SHARED IMPORTED)
+# Create imported target VulkanDemo::fiblib
+add_library(VulkanDemo::fiblib SHARED IMPORTED)
 
-set_target_properties(Vulkan Demo::fiblib PROPERTIES
-  INTERFACE_COMPILE_DEFINITIONS "\$<\$<NOT:\$<BOOL:ON>>:fiblib_STATIC_DEFINE>;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS"
+set_target_properties(VulkanDemo::fiblib PROPERTIES
+  INTERFACE_COMPILE_DEFINITIONS "\$<\$<NOT:\$<BOOL:ON>>:FIBLIB_STATIC_DEFINE>;SYSTEM_WINDOWS;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS"
   INTERFACE_COMPILE_OPTIONS "/MP;/W4;/wd4251;/wd4592;\$<\$<CONFIG:Release>:;/Gw;/GS-;/GL;/GF;>"
   INTERFACE_INCLUDE_DIRECTORIES "${_IMPORT_PREFIX}/include"
 )

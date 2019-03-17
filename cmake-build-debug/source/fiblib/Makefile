@@ -68,18 +68,17 @@ rebuild_cache\fast: rebuild_cache
 
 .PHONY : rebuild_cache\fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd F:\cpp\vulkan-demo\cmake-build-debug
-	F:\Programs\clion\bin\cmake\win\bin\cpack.exe --config ./CPackSourceConfig.cmake F:/cpp/vulkan-demo/cmake-build-debug/CPackSourceConfig.cmake
-	cd F:\cpp\vulkan-demo\cmake-build-debug\source\fiblib
-.PHONY : package_source
+# Special rule for the target install/local
+install\local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	F:\Programs\clion\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local
 
-# Special rule for the target package_source
-package_source\fast: package_source
-
-.PHONY : package_source\fast
+# Special rule for the target install/local
+install\local\fast: preinstall\fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	F:\Programs\clion\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install\local\fast
 
 # Special rule for the target install
 install: preinstall
@@ -106,25 +105,13 @@ edit_cache\fast: edit_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"runtime\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"examples\" \"runtime\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
 list_install_components\fast: list_install_components
 
 .PHONY : list_install_components\fast
-
-# Special rule for the target install/local
-install\local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	F:\Programs\clion\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install\local
-
-# Special rule for the target install/local
-install\local\fast: preinstall\fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	F:\Programs\clion\bin\cmake\win\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install\local\fast
 
 # The main all target
 all: cmake_check_build_system
@@ -288,11 +275,10 @@ help:
 	@echo ... fiblib
 	@echo ... check-fiblib
 	@echo ... clang-tidy-fiblib
-	@echo ... package_source
+	@echo ... install/local
 	@echo ... install
 	@echo ... edit_cache
 	@echo ... list_install_components
-	@echo ... install/local
 	@echo ... source/Fibonacci.obj
 	@echo ... source/Fibonacci.i
 	@echo ... source/Fibonacci.s

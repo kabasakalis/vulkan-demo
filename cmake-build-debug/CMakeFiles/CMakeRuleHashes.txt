@@ -2,5 +2,7 @@
 9a018dc6d842ee2d6667cb8e14cd0de3 CMakeFiles/check-template
 b77f1cab5bd5293d86916d888eb87d4f source/baselib/CMakeFiles/clang-tidy-baselib
 14f50a4d457c070e8700414e14999c11 source/baselib/CMakeFiles/cppcheck-baselib
+29738041caf9e465a22608b2b1627bba source/examples/fibcmd/CMakeFiles/clang-tidy-fibcmd
+07289c2f71a0dfd64211f3998f3da91d source/examples/fibcmd/CMakeFiles/cppcheck-fibcmd
 a96c18addf5554cdd3c3d29c80c36448 source/fiblib/CMakeFiles/clang-tidy-fiblib
 e0409acfdcf4f755480ae46d396e1f8d source/fiblib/CMakeFiles/cppcheck-fiblib

@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/template")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/VulkanDemo")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xdevx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "F:/cpp/vulkan-demo/cmake-build-debug/source/include/Vulkan Demo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "F:/cpp/vulkan-demo/cmake-build-debug/source/include/VulkanDemo")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
@@ -41,7 +41,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("F:/cpp/vulkan-demo/cmake-build-debug/source/baselib/cmake_install.cmake")
   include("F:/cpp/vulkan-demo/cmake-build-debug/source/fiblib/cmake_install.cmake")
   include("F:/cpp/vulkan-demo/cmake-build-debug/source/examples/cmake_install.cmake")
-  include("F:/cpp/vulkan-demo/cmake-build-debug/source/tests/cmake_install.cmake")
 
 endif()
 

@@ -50,7 +50,7 @@ if(NOT GIT_SHA1)
 endif()
 
 # Meta information about the project
-set(META_PROJECT_NAME        "Vulkan Demo")
+set(META_PROJECT_NAME        "VulkanDemo")
 set(META_PROJECT_DESCRIPTION "Getting started with Vulkan")
 set(META_AUTHOR_ORGANIZATION "Spiros Kabasakalis")
 set(META_AUTHOR_DOMAIN       "https://github.com/kabasakalis/vulkan-demo/")
@@ -66,7 +66,7 @@ set(META_NAME_VERSION        "${META_PROJECT_NAME} v${META_VERSION} (${META_VERS
 set(META_CMAKE_INIT_SHA      "555ac7128273d304ee367ffd47195643260bf49c")
 
 string(MAKE_C_IDENTIFIER ${META_PROJECT_NAME} META_PROJECT_ID)
-string(TOLOWER ${META_PROJECT_ID} META_PROJECT_ID)
+string(TOUPPER ${META_PROJECT_ID} META_PROJECT_ID)
 
 
 # 
